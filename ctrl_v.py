@@ -3,8 +3,10 @@ import keyboard
 import os
 import time
 
+os.system('cls')
 file_position = os.path.dirname(os.path.realpath(__file__))  + "\ctrl_v.txt"
-print("ctrl_v.py running...")
+print("Shortcut keys: ctrl + 1 ~ ctrl + 9" )
+print("exit: esc")
 f = open(file_position, 'r')
 
 copy_name = []
@@ -17,7 +19,13 @@ while True:
             if keyboard.is_pressed(str(key_num)) & keyboard.is_pressed('ctrl'):
                 num = int(key_num)
                 time.sleep(0.3)
+                os.system('cls')
+                print("Shortcut keys: ctrl + 1 ~ ctrl + 9" )
+                print("exit: esc")
+                print("\n")
                 break
+            if keyboard.is_pressed("esc"):
+                quit()
             if key_num >= 9: key_num = 0
             key_num += 1
 
@@ -33,6 +41,6 @@ while True:
         pyperclip.copy("".join(copy_name))
         copy_name.clear()
     except ValueError:
-        print("x\n")
+        print("error\n")
 f.close()
 
