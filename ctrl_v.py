@@ -5,9 +5,9 @@ import time
 
 os.system('cls')
 file_position = os.path.dirname(os.path.realpath(__file__))  + "\ctrl_v.txt"
-print("Shortcut keys: ctrl + 1 ~ ctrl + 9" )
+print("Shortcut keys: ctrl + shift + number" )
 print("exit: esc")
-f = open(file_position, 'r')
+f = open(file_position, 'rt', encoding='UTF8')
 
 copy_name = []
 lines = f.readlines()
@@ -16,11 +16,11 @@ while True:
     try:
         key_num = 1
         while True:
-            if keyboard.is_pressed(str(key_num)) & keyboard.is_pressed('ctrl'):
+            if keyboard.is_pressed(str(key_num)) & keyboard.is_pressed('ctrl') & keyboard.is_pressed('shift'):
                 num = int(key_num)
                 time.sleep(0.3)
                 os.system('cls')
-                print("Shortcut keys: ctrl + 1 ~ ctrl + 9" )
+                print("Shortcut keys: ctrl + shift + number" )
                 print("exit: esc")
                 print("\n")
                 break
@@ -31,7 +31,7 @@ while True:
 
         if num == "":
             raise ValueError
-        copy_num = lines.index( "ctrl + " + str(num) + "\n") + 1
+        copy_num = lines.index( "ctrl + shift + " + str(num) + "\n") + 1
         for i in range(len(lines) - 1):
             if lines[copy_num + i] == "\n": break
             elif lines[copy_num + i] == "[end]": break
