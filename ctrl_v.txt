@@ -1,0 +1,29 @@
+[start]
+ctrl + 1
+noting(ctrl + 1)
+
+ctrl + 2
+noting(ctrl + 2)
+
+ctrl + 3
+noting(ctrl + 3)
+
+ctrl + 4
+noting(ctrl + 4)
+
+ctrl + 5
+noting(ctrl + 5)
+
+ctrl + 6
+noting(ctrl + 6)
+
+ctrl + 7
+noting(ctrl + 7)
+
+ctrl + 8
+noting(ctrl + 8)
+
+ctrl + 9
+noting(ctrl + 9)
+
+[end]
